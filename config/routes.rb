@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vendors
   devise_for :users
   get 'activity/mine'
   get 'activity/feed'

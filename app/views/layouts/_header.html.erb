@@ -9,10 +9,7 @@
       ></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="index3.html" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item d-none d-sm-inline-block">
-      <a href="#" class="nav-link">Contact</a>
+      <a href="/" class="nav-link">Home</a>
     </li>
   </ul>
   <!-- SEARCH FORM -->
@@ -50,7 +47,7 @@
             />
             <div class="media-body">
               <h3 class="dropdown-item-title">
-                Brad Diesel
+                Abebe Kebede
                 <span class="float-right text-sm text-danger"
                   ><i class="fas fa-star"></i
                 ></span>
@@ -74,7 +71,7 @@
             />
             <div class="media-body">
               <h3 class="dropdown-item-title">
-                John Pierce
+                Abiy Ahmed 
                 <span class="float-right text-sm text-muted"
                   ><i class="fas fa-star"></i
                 ></span>
@@ -98,7 +95,7 @@
             />
             <div class="media-body">
               <h3 class="dropdown-item-title">
-                Nora Silvester
+                Kenenisa Bekele
                 <span class="float-right text-sm text-warning"
                   ><i class="fas fa-star"></i
                 ></span>
@@ -125,12 +122,12 @@
         <span class="dropdown-item dropdown-header">15 Notifications</span>
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item">
-          <i class="fas fa-envelope mr-2"></i> 4 new messages
+          <i class="fas fa-envelope mr-2"></i> 4 new invoices
           <span class="float-right text-muted text-sm">3 mins</span>
         </a>
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item">
-          <i class="fas fa-users mr-2"></i> 8 friend requests
+          <i class="fas fa-users mr-2"></i> 8 pending invoices
           <span class="float-right text-muted text-sm">12 hours</span>
         </a>
         <div class="dropdown-divider"></div>
@@ -145,18 +142,9 @@
       </div>
     </li>
     <li class="nav-item">
-      <a
-        class="nav-link"
-        data-widget="control-sidebar"
-        data-slide="true"
-        href="#"
-        ><i class="fas fa-th-large"></i
-      ></a>
-    </li>
-    <li class="nav-item">
       <p class="navbar-text float-right">
         <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>.
+          | Logged in as <strong><%= current_user.first_name + " " + current_user.last_name %></strong> |
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         <% else %>

@@ -18,7 +18,19 @@ window.$ = window.jQuery = jQuery;
 
 // require("bootstrap");
 require("admin-lte");
-// require("admin-lte/plugins/chart.js/Chart");
+require("admin-lte/plugins/datatables/jquery.dataTables");
+require("admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4");
+require("admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4");
+require("admin-lte/plugins/datatables-responsive/js/dataTables.responsive");
+require("admin-lte/plugins/pdfmake/pdfmake");
+require("admin-lte/plugins/pdfmake/vfs_fonts");
+require("admin-lte/plugins/datatables-buttons/js/dataTables.buttons");
+require("admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4");
+require("admin-lte/plugins/datatables-buttons/js/buttons.colVis");
+require("admin-lte/plugins/datatables-buttons/js/buttons.flash");
+require("admin-lte/plugins/datatables-buttons/js/buttons.html5");
+require("admin-lte/plugins/datatables-buttons/js/buttons.print");
+
 
 require("chart.js");
 
@@ -28,6 +40,21 @@ require("chart.js");
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-global.toastr = require("toastr")
+global.toastr = require("toastr");
 
+$(document).ready(function() {
+    $('.iraps_datatable').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+        "responsive": true,
+        "dom": 'lBfrtip',
+        "buttons": [
+            'copy', 'csv', 'pdf', 'print'
+        ]
+    });
+});
 
