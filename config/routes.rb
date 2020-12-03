@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :invoices
   resources :vendors
   devise_for :users
   get 'activity/mine'

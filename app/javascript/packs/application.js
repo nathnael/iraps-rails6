@@ -31,6 +31,10 @@ require("admin-lte/plugins/datatables-buttons/js/buttons.flash");
 require("admin-lte/plugins/datatables-buttons/js/buttons.html5");
 require("admin-lte/plugins/datatables-buttons/js/buttons.print");
 
+require("admin-lte/plugins/moment/moment-with-locales");
+require("admin-lte/plugins/inputmask/jquery.inputmask");
+require("admin-lte/plugins/daterangepicker");
+require("bootstrap-datetimepicker-4.17.37");
 
 require("chart.js");
 
@@ -56,5 +60,7 @@ $(document).ready(function() {
             'copy', 'csv', 'pdf', 'print'
         ]
     });
+
+    $('#date_received').datetimepicker();
 });
 
