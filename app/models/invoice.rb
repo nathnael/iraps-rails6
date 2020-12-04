@@ -1,10 +1,17 @@
 class Invoice < ApplicationRecord
     belongs_to :vendor, foreign_key: 'vendor_id'
-    belongs_to :user, foreign_key: 'created_by'
+    belongs_to :created_by, :class_name => 'User', :foreign_key => 'created_by_id'
+    belongs_to :assigned_to, :class_name => 'User', :foreign_key => 'assigned_to_id', optional: true
 
     enum currency_type: {
-        etb: 1,
-        usd: 2
+        ETB: 1,
+        USD: 2
+    }
+
+    enum status: {
+        Registered: 1,
+        Assigned: 1,
+        Processed: 2
     }
 
     enum received_from: {

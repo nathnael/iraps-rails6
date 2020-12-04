@@ -82,10 +82,20 @@
                   <%= f.text_field :submitted_by, :class => 'form-control' %>
                 </div>
               </div>
+              <div class="row col-12">
+                <!--
+                <% unless @invoice.status.nil? %>
+                  <div class="form-group col-6">
+                    <%= f.label :status %>
+                    <%= f.collection_select :status, Invoice.statuses, :first, :first, {:include_blank => '-- Select --'},{:class => 'form-control'} %>
+                  </div>
+                <% end %>
+                -->
 
-              <div class="form-group col-6">
-                <%= f.label :remark %>
-                <%= f.text_area :remark, :class => 'form-control' %>
+                <div class="form-group col-6">
+                  <%= f.label :remark %>
+                  <%= f.text_area :remark, :class => 'form-control' %>
+                </div>
               </div>
             </div>
             <!-- /.card-body -->

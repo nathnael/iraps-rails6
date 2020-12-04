@@ -39,6 +39,7 @@
                   <th>Received by</th>
                   <th>Received from</th>
                   <th>Submitted by</th>
+                  <th>Assigned to</th>
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -61,13 +62,16 @@
                       <%= invoice.lti_number %>
                     </td>
                     <td>
-                      <%= invoice.user.name %>
+                      <%= invoice.created_by.name %>
                     </td>
                     <td>
                       <%= invoice.received_from %>
                     </td>
                     <td>
                       <%= invoice.submitted_by %>
+                    </td> 
+                    <td>
+                      <%= select_tag :assigned_id, options_from_collection_for_select(User.all, "id", "name", invoice.assigned_to_id), :onchange => "$.post('#{invoice_path(invoice.id)}', {'_method':'put', 'invoice[assigned_to_id]':this.value} );" %>
                     </td> 
                     <td>
                       <a href="<%= edit_invoice_path(invoice) %>" class="btn btn-warning btn-sm">
@@ -92,6 +96,7 @@
                   <th>Received by</th>
                   <th>Received from</th>
                   <th>Submitted by</th>
+                  <th>Assigned to</th>
                   <th>Actions</th>
                 </tr>
               </tfoot>
@@ -122,8 +127,7 @@
             'copy', 'csv', 'pdf', 'print'
         ]
       });
-    }
-    
+    }  
   });
 </script>
 
