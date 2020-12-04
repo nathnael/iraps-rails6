@@ -18,17 +18,17 @@ window.$ = window.jQuery = jQuery;
 
 // require("bootstrap");
 require("admin-lte");
-require("admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4");
-require("admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4");
-require("admin-lte/plugins/datatables-responsive/js/dataTables.responsive");
+// require("dataTables.bootstrap4");
+// require("responsive.bootstrap4");
+// require("dataTables.responsive");
 // require("admin-lte/plugins/pdfmake/pdfmake");
 // require("admin-lte/plugins/pdfmake/vfs_fonts");
-require("admin-lte/plugins/datatables-buttons/js/dataTables.buttons");
-require("admin-lte/plugins/datatables-buttons/js/buttons.bootstrap4");
-require("admin-lte/plugins/datatables-buttons/js/buttons.colVis");
-require("admin-lte/plugins/datatables-buttons/js/buttons.flash");
-require("admin-lte/plugins/datatables-buttons/js/buttons.html5");
-require("admin-lte/plugins/datatables-buttons/js/buttons.print");
+// require("dataTables.buttons");
+// require("buttons.bootstrap4");
+// require("buttons.colVis");
+// require("buttons.flash");
+// require("buttons.html5");
+// require("buttons.print");
 
 // require("admin-lte/plugins/moment/moment-with-locales");
 // require("admin-lte/plugins/inputmask/jquery.inputmask");
