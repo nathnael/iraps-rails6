@@ -33,7 +33,7 @@ require("admin-lte/plugins/datatables-buttons/js/buttons.print");
 
 require("admin-lte/plugins/moment/moment-with-locales");
 require("admin-lte/plugins/inputmask/jquery.inputmask");
-require("admin-lte/plugins/daterangepicker");
+require("admin-lte/plugins/daterangepicker/daterangepicker");
 require("bootstrap-datetimepicker-4.17.37");
 
 require("chart.js");
