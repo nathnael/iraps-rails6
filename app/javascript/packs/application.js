@@ -18,7 +18,6 @@ window.$ = window.jQuery = jQuery;
 
 // require("bootstrap");
 require("admin-lte");
-require("admin-lte/plugins/datatables/jquery.dataTables");
 require("admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4");
 require("admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4");
 require("admin-lte/plugins/datatables-responsive/js/dataTables.responsive");
