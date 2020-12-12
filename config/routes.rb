@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'user/index'
+  get 'user/show'
+  resources :permissions
   resources :invoices
   resources :vendors
   devise_for :users

@@ -11,6 +11,7 @@ class Invoice < ApplicationRecord
     enum status: {
         Registered: 1,
         Assigned: 1,
+        'In Process': 3,
         Processed: 2
     }
 

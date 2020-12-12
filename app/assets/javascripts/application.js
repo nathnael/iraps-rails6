@@ -16,6 +16,11 @@
 //= require jquery.calendars/jquery.calendars.ethiopian-am.js
 
 $(document).ready(function() {
+    
+    var activeLi = $('li.active');
+    activeLi.parentsUntil('nav', 'li').addClass('active');
+    activeLi.parentsUntil('nav', 'ul').removeClass('collapse');
+
     $('.gregorian_datepicker').calendarsPicker({
         format: 'DD, MM d, yyyy',
         onSelect: function(dateText, inst) {
