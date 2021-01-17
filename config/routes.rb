@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  get 'user/index'
-  get 'user/show'
+  devise_for :users
+  resources :users
   resources :permissions
   resources :invoices
   resources :vendors
-  devise_for :users
+  
   # put '/invoices/assign_invoice/:id', to: 'invoices#assign_invoice'
+
+  put 'users/:id/updatePermissions', to: 'users#updatePermissions'
+  get 'users/:id/user_permissions', to: 'users#user_permissions'
 
   root to: 'dashboard#index'
 end

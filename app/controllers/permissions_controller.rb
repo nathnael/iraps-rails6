@@ -37,7 +37,7 @@ class PermissionsController < ApplicationController
         permission.user_type = Permission.user_types[role[0]]
         puts "permission.user_type: " + Permission.user_types[role[0]].to_s
         if permission.save
-          saved++
+          saved = saved + 1
         end
       end
     end

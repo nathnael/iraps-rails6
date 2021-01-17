@@ -1,6 +1,6 @@
 class Permission < ApplicationRecord
-    has_many :users_permissions
-    has_many :users, through: :users_permissions
+    has_many :user_permission
+    has_many :users, through: :user_permission
 
     validates :name, presence: true
 
