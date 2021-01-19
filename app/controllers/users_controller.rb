@@ -21,10 +21,10 @@ class UsersController < ApplicationController
   def updatePermissions
     if(params[:permissions].present?)
       new_permissions = params.require(:permissions)
-      UsersPermission.where(user_id: @user.id).destroy_all
+      UserPermission.where(user_id: @user.id).destroy_all
 
       new_permissions.each do |permission|
-        _permission = UsersPermission.new ({
+        _permission = UserPermission.new ({
           permission_id: permission[0].to_i,
           user_id: @user.id
         })
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
         _permission.save
       end
     else
-      UsersPermission.where(user_id: @user.id).destroy_all
+      UserPermission.where(user_id: @user.id).destroy_all
     end
     redirect_to @user, success: 'User profile was successfully updated.'
   end

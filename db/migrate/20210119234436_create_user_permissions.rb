@@ -1,6 +1,6 @@
-class Creates < ActiveRecord::Migration[6.0]
+class CreateUserPermissions < ActiveRecord::Migration[6.0]
   def change
-    create_table :users_permissions do |t|
+    create_table :user_permissions do |t|
       t.integer :user_id
       t.integer :permission_id
       t.integer :created_by
