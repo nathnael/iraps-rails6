@@ -36,19 +36,22 @@
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <%= link_to vendors_url, :class => "nav-link" do %>
-                <i class="nav-icon fas fa-building"></i>
-                <p>Vendors</p>
-              <% end %>
-            </li>
+          <ul class="nav nav-treeview">            
+            <%if policy(Vendor).index? %>
+              <li class="nav-item">
+                <%= link_to vendors_url, :class => "nav-link" do %>
+                  <i class="nav-icon fas fa-building"></i>
+                  <p>Vendors</p>
+                <% end %>
+              </li>
+            <%end%>
             <li class="nav-item">
               <%= link_to invoices_url, :class => "nav-link" do %>
                 <i class="fas fa-file-invoice-dollar nav-icon"></i>
                 <p>Invoices</p>
               <% end %>
             </li>
+            <!--
             <li class="nav-item">
               <a href="./index2.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -109,6 +112,7 @@
                 <p>Invoice Follow Up</p>
               </a>
             </li>
+            -->
           </ul>
         </li>
         <li class="nav-item has-treeview">

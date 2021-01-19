@@ -10,13 +10,12 @@ class User < ApplicationRecord
     first_name.to_s + ' ' + last_name.to_s
   end
 
-  def permission(permission, user_type)    
+  def permission(permission, user_type)
     return  self.permissions.where(name: permission, user_type: user_type).count > 0 ? true : false
   end
 
   def has_permission(permission_id)
-    self.permissions.where(id: permission_id).count > 0 ? true : false
-    
+    self.permissions.where(id: permission_id).count > 0 ? true : false    
   end
 
   def user_type_in(users_types)
