@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   
-  has_many :user_permissions
-  has_many :permissions, through: :user_permissions
+  has_many :users_permissions
+  has_many :permissions, through: :users_permissions
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable

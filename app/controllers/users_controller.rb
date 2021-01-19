@@ -18,15 +18,13 @@ class UsersController < ApplicationController
     @unique_permissions = Permission.pluck(:name).uniq!
   end
 
-  def updatePermissions    
-
+  def updatePermissions
     if(params[:permissions].present?)
       new_permissions = params.require(:permissions)
-      UserPermission.where(user_id: @user.id).destroy_all
-      
+      UsersPermission.where(user_id: @user.id).destroy_all
+
       new_permissions.each do |permission|
-        puts "******************** permission: " + permission.inspect
-        _permission = UserPermission.new ({
+        _permission = UsersPermission.new ({
           permission_id: permission[0].to_i,
           user_id: @user.id
         })
@@ -34,9 +32,8 @@ class UsersController < ApplicationController
         _permission.save
       end
     else
-      UserPermission.where(user_id: @user.id).destroy_all
+      UsersPermission.where(user_id: @user.id).destroy_all
     end
-
     redirect_to @user, success: 'User profile was successfully updated.'
   end
 
